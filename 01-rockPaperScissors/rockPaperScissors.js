@@ -17,7 +17,20 @@
 *
 */
 
-var rockPaperScissors = function (
-) {
+var rockPaperScissors = function() {
   // TODO: your solution here
+  var results = [];
+  var array = ["rock", "scissors", "paper"];
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      for (let k = 0; k < array.length; k++) {
+        //temp storage array of one round of array
+        var tempArray = [];
+        tempArray.push(array[i], array[j], array[k]);
+        //push tempArray to results array
+        results.push(tempArray);
+      }
+    }
+  }
+  return results;
 };
